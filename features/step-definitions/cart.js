@@ -6,10 +6,12 @@ When(`There is one item in cart`, async function(){
     await expect(cart).toHaveText(expect.stringContaining("1"));
 })
 When(`I remove it from the cart`, async function(){
-    (await $(`a[title='View my shopping cart']`)).isSelected();
-    await browser.debug()
-    (await $(`.ajax_cart_block_remove_link`)).click();
+    (await $(`.icon-trash`)).click();
 })
 Then(`I see the cart is empty`, async function(){
-
+    const cart = (await $(`.ajax_cart_no_product`));
+    const cartMessage = (await $(`.alert.alert-warning`));
+    await expect(cart).toHaveText(expect.stringContaining("(empty)"));
+    await expect(cartMessage).toHaveText(expect.stringContaining("Your shopping cart is empty."));
+    
 })
