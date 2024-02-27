@@ -12,7 +12,19 @@ npm install
 ```
 npm run wdio
 ```
-
+or run the tags:
+```
+npm run tag -- "@tc1" 
+```
+```
+npm run tag -- "@tc2" 
+```
+```
+npm run tag -- "@tc3" 
+```
+```
+npm run tag -- "@tc4" 
+```
 ## How to view report
 First run the tests and then run command:
 ```
