@@ -13,5 +13,4 @@ Then(`I see the cart is empty`, async function(){
     const cartMessage = (await $(`.alert.alert-warning`));
     await expect(cart).toHaveText(expect.stringContaining("(empty)"));
     await expect(cartMessage).toHaveText(expect.stringContaining("Your shopping cart is empty."));
-    
 })
