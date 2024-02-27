@@ -25,7 +25,7 @@ Feature: "http://www.automationpractice.pl/" Website
     Then There is one item in cart
 
   @tc4
-  Scenario: 
+  Scenario: User able to remove an item from the cart
     Given I am on the home page
     When I open first item
     And I Add it to the cart
