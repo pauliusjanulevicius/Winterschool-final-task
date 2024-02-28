@@ -12,7 +12,7 @@ When('I open first item', async function () {
 
 When('I Add it to the cart', async function () {
     await ProductPage.AddToCart.click();
-    await browser.pause(5000);
+    await browser.pause(500);
 });
 
 When('I press {string}', async function (text) {
