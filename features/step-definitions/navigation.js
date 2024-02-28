@@ -16,5 +16,6 @@ When("I press search button", async function () {
 })
 
 Then(`I see results only containing {string}`, async function (text) {
-    await expect(SearchPage.SearchResults).toHaveText(expect.stringContaining(text.toUpperCase()));
+    await expect(SearchPage.SearchResultsTitle).toHaveText(expect.stringContaining(text.toUpperCase()));
+    await SearchPage.CheckSearchResults(text);
 })
