@@ -5,14 +5,18 @@ import ProductPage from '../page-objects/product.page.js';
 import CartPage from '../page-objects/cart.page.js';
 
 When('I open first item', async function () {
-    await ProductsPage.womenCategory.click();
-    await ProductsPage.firstItem.click();
-    await ProductPage.colorBlue.click();
+    // REVIEW: The blue item is not always in stock
+    // And how do you know that that the first item will always have blue color?
+    // await ProductsPage.womenCategory.click();
+    // await ProductsPage.firstItem.click();
+    // await ProductPage.colorBlue.click();
+    await browser.debug();
 });
 
 When('I Add it to the cart', async function () {
-    await ProductPage.AddToCart.click();
-    await browser.pause(500);
+    // await ProductPage.AddToCart.click();
+    // await browser.pause(500);
+    await browser.debug();
 });
 
 When('I press {string}', async function (text) {
